@@ -19,6 +19,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   });
 });
 
+
 (function (global) {
 
 var dc = {};
@@ -78,6 +79,8 @@ var switchMenuToActive = function () {
     document.querySelector("#navMenuButton").className = classes;
   }
 };
+
+
 
 
 global.$dc = dc;
