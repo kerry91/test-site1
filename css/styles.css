@@ -75,10 +75,6 @@ body {
   display: block!important;
 }
 
-.collapse:not(.toggle) {
-   display: none!important;
-}
-
 
 .collapse.in {
     display: block !important;
