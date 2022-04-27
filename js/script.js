@@ -25,7 +25,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtml = "pages/home.html";
-var menuHtml = "pages/menu.html"
+var menuHtml = "pages/menu.html";
 
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
@@ -38,6 +38,21 @@ var showLoading = function (selector) {
   var html = "<div class='text-center'>";
   html += "<img src='images/ajax-loader.gif'></div>";
   insertHtml(selector, html);
+};
+
+// Remove the class 'active' from home and switch to Menu button
+var switchMenuToActive = function () {
+  // Remove 'active' from home button
+  var classes = document.querySelector("#navHomeButton").className;
+  classes = classes.replace(new RegExp("active", "g"), "");
+  document.querySelector("#navHomeButton").className = classes;
+
+  // Add 'active' to menu button if not already there
+  classes = document.querySelector("#navMenuButton").className;
+  if (classes.indexOf("active") == -1) {
+    classes += " active";
+    document.querySelector("#navMenuButton").className = classes;
+  }
 };
 
 // On page load (before images or CSS)
@@ -64,23 +79,6 @@ dc.loadMenuCategories = function () {
   },
   false);
 };
-
-// Remove the class 'active' from home and switch to Menu button
-var switchMenuToActive = function () {
-  // Remove 'active' from home button
-  var classes = document.querySelector("#navHomeButton").className;
-  classes = classes.replace(new RegExp("active", "g"), "");
-  document.querySelector("#navHomeButton").className = classes;
-
-  // Add 'active' to menu button if not already there
-  classes = document.querySelector("#navMenuButton").className;
-  if (classes.indexOf("active") == -1) {
-    classes += " active";
-    document.querySelector("#navMenuButton").className = classes;
-  }
-};
-
-
 
 
 global.$dc = dc;
