@@ -20,9 +20,19 @@ body {
   border-radius: 25px;
 }
 
+.fakeimg {
+  background: url('../images/fakeimg.jpg') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+  border-radius: 25px;
+}
+
+
 .navbar-brand {
   padding-top: 25px;
 }
+
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
   color: #000000;
@@ -30,10 +40,11 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
-  margin-top: 40px;
+  margin-top: 55px;
   margin-bottom: 0;
   line-height: .75;
 }
+
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
@@ -61,11 +72,19 @@ body {
 }
 
 .navbar .container{
-  display: block;
+  display: block!important;
+}
+
+.collapse:not(.show) {
+  display: block!important;
 }
 
 .navbar-nav{
-  flex-direction: row;
+  flex-direction: row!important;
+}
+
+.navbar-right{
+  float: right!important;
 }
 /* END HEADER */
 
@@ -74,7 +93,7 @@ body {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
-  background-color: #222;
+  background-color: #f5f5f5;
   border-top: 0;
 }
 .panel-footer div.row {
@@ -90,12 +109,6 @@ body {
   color: #557c3e;
   font-size: .8em;
   line-height: 1.8;
-}
-#testimonials {
-  font-style: italic;
-}
-#testimonials p:nth-child(2) {
-  margin-top: 25px;
 }
 /* END FOOTER */
 
