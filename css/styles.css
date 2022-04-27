@@ -8,16 +8,16 @@ body {
 
 /** HEADER **/
 #header-nav {
-  background-color: #CD5C5C;
-  border-radius: 0;
-  border: 0;
+  background-color: #ffffff;
+  
 }
 
 #logo-img {
-  background: url('../images/logo.png') no-repeat;
+  background: url('../images/KAW.jpeg') no-repeat;
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
+  border-radius: 25px;
 }
 
 .navbar-brand {
@@ -26,11 +26,11 @@ body {
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
   color: #000000;
-  font-size: 2em;
+  font-size: 3em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
+  margin-top: 40px;
   margin-bottom: 0;
   line-height: .75;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 #nav-list {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 #nav-list a {
   color: #000000;
@@ -52,25 +52,20 @@ body {
   font-size: 1.8em;
 }
 
-#phone {
-  margin-top: 5px;
-}
-#phone a { /* Phone number */
-  text-align: right;
-  padding-bottom: 0;
-}
-#phone div { /* We Deliver */
-  color: #557c3e;
-  text-align: right;
-  padding-right: 15px;
-}
-
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
+}
+
+.navbar .container, .navbar .container-fluid, .navbar .container-lg, .navbar .container-md, .navbar .container-sm, .navbar .container-xl{
+  display: block;
+}
+
+.navbar-nav{
+  flex-direction: row;
 }
 /* END HEADER */
 
@@ -124,7 +119,7 @@ body {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #menu-tile {
-  background: url('../images/menu-tile.jpg') no-repeat;
+  background: url('../images/email-template.png') no-repeat;
   background-position: center;
 }
 #specials-tile {
