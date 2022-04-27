@@ -86,3 +86,10 @@ var switchMenuToActive = function () {
 global.$dc = dc;
 
 })(window);
+
+
+      $('.carousel').carousel
+      {
+  interval: 2000
+  pause: "hover"
+};

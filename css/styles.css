@@ -257,6 +257,7 @@ body {
 .carousel {
   position: relative;
   margin-bottom: 18px;
+  margin-top: 200px;
   line-height: 1;
 }
 .carousel-inner {
