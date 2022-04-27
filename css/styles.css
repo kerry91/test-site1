@@ -20,6 +20,11 @@ body {
   border-radius: 25px;
 }
 
+#nav-list{
+  padding-top: 15px;
+  font-size: 18px;
+}
+
 .fakeimg {
   background: url('../images/fakeimg.jpg') no-repeat;
   width: 150px;
@@ -50,7 +55,7 @@ body {
 }
 
 #nav-list {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 #nav-list a {
   color: #000000;
