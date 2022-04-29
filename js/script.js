@@ -55,6 +55,7 @@ var switchMenuToActive = function () {
   }
 };
 
+
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -69,7 +70,18 @@ $ajaxUtils.sendGetRequest(
   false);
 });
 
-dc.loadMenuCategories = function () {
+dc.loadContacts = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+  menuHtml,
+  function (responseText) {
+    document.querySelector("#main-content")
+      .innerHTML = responseText;
+  },
+  false);
+};
+
+dc.loadAbout = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
   menuHtml,
@@ -91,3 +103,4 @@ global.$dc = dc;
   interval: 2000
   pause: "hover"
 };
+
