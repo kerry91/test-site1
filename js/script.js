@@ -1,25 +1,3 @@
-$(function () { // Same as document.addEventListener("DOMContentLoaded"...
-
-  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-  $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
-    }
-  });
-
-  // In Firefox and Safari, the click event doesn't retain the focus
-  // on the clicked button. Therefore, the blur event will not fire on
-  // user clicking somewhere else in the page and the blur event handler
-  // which is set up above will not be called.
-  // Refer to issue #28 in the repo.
-  // Solution: force focus on the element that the click event fired on
-  $("#navbarToggle").click(function (event) {
-    $(event.target).focus();
-  });
-});
-
-
 (function (global) {
 
 var dc = {};
@@ -40,21 +18,6 @@ var showLoading = function (selector) {
   insertHtml(selector, html);
 };
 
-// Remove the class 'active' from home and switch to Menu button
-var switchMenuToActive = function () {
-  // Remove 'active' from home button
-  var classes = document.querySelector("#navHomeButton").className;
-  classes = classes.replace(new RegExp("active", "g"), "");
-  document.querySelector("#navHomeButton").className = classes;
-
-  // Add 'active' to menu button if not already there
-  classes = document.querySelector("#navMenuButton").className;
-  if (classes.indexOf("active") == -1) {
-    classes += " active";
-    document.querySelector("#navMenuButton").className = classes;
-  }
-};
-
 
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -70,6 +33,7 @@ $ajaxUtils.sendGetRequest(
   false);
 });
 
+//Load contacts page
 dc.loadContacts = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
@@ -81,6 +45,7 @@ dc.loadContacts = function () {
   false);
 };
 
+//Load about pagte
 dc.loadAbout = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
@@ -97,10 +62,9 @@ global.$dc = dc;
 
 })(window);
 
-
-      $('.carousel').carousel
+//Carousel
+$('.carousel').carousel
       {
   interval: 2000
   pause: "hover"
 };
-
