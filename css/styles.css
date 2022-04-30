@@ -76,7 +76,7 @@ body {
   width: 100%;
   position: relative;
 }
-.carousel .item {
+.carousel-item {
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
