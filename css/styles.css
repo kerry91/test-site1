@@ -9,12 +9,7 @@ body {
 /** HEADER **/
 #header-nav {
   background-color: black;
-  
-}
 
-
-#collapsable-nav{
-  text-align: center;
 }
 
 
@@ -24,49 +19,10 @@ body {
   height: auto;
 }
 
-#nav-list{
+.nav-link{
   font-size: 18px;
+  color: #dee2e6;
 }
-
-
-.nav-item {
-  margin-left: 10px;
-}
-
-
-.navbar-brand a:hover, .navbar-brand a:focus {
-  text-decoration: none;
-}
-
-
-#nav-list a {
-  color: whitesmoke;
-  
-}
-#nav-list a:hover {
-  text-decoration: underline;
-}
-#nav-list a span {
-  font-size: 3em;
-}
-
-
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #61122f;
-}
-
-.navbar-toggle{
-  margin-right: 0px!important;
-
-}
-
-
-
-.collapse.in {
-    display: block !important;
-}
-
-
 
 /* END HEADER */
 
@@ -100,6 +56,14 @@ body {
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
+}
+
+.footer-list{
+  margin-right: 2em;
+}
+
+.footer-copyright{
+  margin-left: 2em;
 }
 /* END FOOTER */
 
@@ -155,7 +119,7 @@ body {
     font-size: 1em;
     margin-right: 5px;
   }
-  
+
 
 #nav-list a:hover {
   color: black;
@@ -188,7 +152,7 @@ body {
     font-size: 6vw;
   }
   /* End Header */
-  
+
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -215,7 +179,7 @@ body {
   transition: 0.6s ease-in-out left;
 }
 .carousel .item > img {
-  
+
   line-height: 25em;
   width: 100%;
   height: 40em;
